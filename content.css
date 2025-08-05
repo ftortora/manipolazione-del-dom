@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.btn {
+  background-color: blue;
+}
+
+.cambia-sfondo {
+    background-color: #333333; 
+    color: #ffffff; 
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+  color: #2c2c2c;
+  background-color: #e71837;
+  min-height: 100vh;
+}
+
+.main-title {
+  text-align: center;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #444 0%, #222 50%, #000 100%);
+  color: #c0c0c0;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  border-bottom: 3px solid #666;
+}
+
+.catalog-button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.header-button {
+  background: linear-gradient(135deg, #e71837 0%, #c41230 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header-button:hover {
+  background: linear-gradient(135deg, #ff1f4a 0%, #e71837 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.header-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ddd;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Nuovo stile per i div contenitori delle immagini */
+.image-container {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Nuovo stile per i div inseriti tra le immagini */
+.image-divider {
+  background: linear-gradient(135deg, #d1d1d1 0%, #b8b8b8 100%);
+  height: 3px;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-divider::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.product-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #1a1a1a;
+  font-weight: bold;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+  color: #444;
+  flex-grow: 1;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.product-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 0.8rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.product-link {
+  display: inline-block;
+  background: linear-gradient(135deg, #424242 0%, #212121 100%);
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #555;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-size: 0.9rem;
+}
+
+.product-link:hover {
+  background: linear-gradient(135deg, #555 0%, #333 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.comment-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: linear-gradient(145deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ddd;
+}
+
+.comment-section h2 {
+  color: #1a1a1a;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group select,
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e71837;
+  box-shadow: 0 0 0 3px rgba(231, 24, 55, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: Arial, sans-serif;
+}
+
+.submit-comment {
+  background: linear-gradient(135deg, #e71837 0%, #c41230 100%);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  align-self: flex-start;
+}
+
+.submit-comment:hover {
+  background: linear-gradient(135deg, #ff1f4a 0%, #e71837 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.submit-comment:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+  color: #c0c0c0;
+  text-align: center;
+  border-top: 2px solid #444;
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: 0 1rem;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .catalog-button-container {
+    padding: 0 1rem;
+  }
+
+  .comment-section {
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+  }
+}
+
+.newLink {
+  text-decoration: double;
+  color: green;
+}
+
+.visibility {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
